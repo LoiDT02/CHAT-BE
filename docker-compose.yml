@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  fastapi-app:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - mongodb
+    environment:
+      POSTGRES_USER: loi
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: chatdb
+      POSTGRES_HOST: postgres
+      MONGO_URL: mongodb://loi:123@mongodb:27017/chatdb
+    volumes:
+      - .:/app
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: loi
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: chatdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:6
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: loi
+      MONGO_INITDB_ROOT_PASSWORD: 123
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  postgres_data:
+  mongo_data:

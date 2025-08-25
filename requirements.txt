@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+pymongo
+motor
+python-dotenv
+alembic
+pydantic-settings
+asyncpg
+argon2-cffi
+passlib
+unidecode
+rapidfuzz
+pyjwt

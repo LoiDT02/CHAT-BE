@@ -1,0 +1,17 @@
+# editor
+.ipynb_checkpoints
+.idea
+!.idea/watchers.xml
+**/.DS_Store
+
+# python
+*__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+wheels/
+
+# Virtual environments
+/venv
