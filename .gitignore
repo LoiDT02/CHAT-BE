@@ -15,3 +15,7 @@ wheels/
 
 # Virtual environments
 /venv
+.env.dev
+client_secret_840805765611-ifmkcjpvrrk9mok2t9t0dvmrid8pliko.apps.googleusercontent.com.json
+cloudflared tunnel login.txt
+/cloudflare

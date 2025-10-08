@@ -42,6 +42,16 @@ class Settings(BaseSettings):
     JWT_SECRET: str
     tz: str = "Asia/Ho_Chi_Minh"
 
+    #OAUTH2
+    GOOGLE_CLIENT_ID: str = "GOOGLE_CLIENT_ID"
+    GOOGLE_CLIENT_SECRET: str = "GOOGLE_CLIENT_SECRET"
+    GOOGLE_REDIRECT_URI: str = "GOOGLE_REDIRECT_URI"
 
+    #DOMAIN
+    COOKIE_DOMAIN: str = ".codelearnit.io.vn"
+    MINIO_ENDPOINT:str = "localhost:9000"
+    MINIO_ROOT_USER:str = "minio"
+    MINIO_ROOT_PASSWORD:str = "minio123"
+    PUBLIC_MINIO_DOMAIN:str="https://minio.codelearnit.io.vn"
 env_file = os.getenv("ENV_FILE", ".env.dev")
 settings = Settings(_env_file=env_file, _env_file_encoding="utf-8")

@@ -88,7 +88,6 @@ async def verify_access_token(
         raise error_exception_handler(app_status=AppStatus.ERROR_400_INVALID_TOKEN)
     return user
 
-
 async def verify_refresh_token(
         token: str,
         session: AsyncSession,
@@ -111,6 +110,5 @@ async def get_current_active_user(
         token = request.cookies["access_token"]
     elif credentials:
         token = credentials.credentials
-    print('token',token)
     user = await verify_access_token(token=token, session=session)
     return user

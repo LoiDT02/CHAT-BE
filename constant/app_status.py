@@ -42,6 +42,8 @@ class AppStatus(Enum):
     ERROR_400_ISSUE_ALREADY_REOPENED = status.HTTP_400_BAD_REQUEST, 'ALREADY_REOPENED', 'Vấn đề đã được mở lại.'
 
     HTTP_401_USER_NOT_ACTIVE = status.HTTP_401_UNAUTHORIZED, 'UNAUTHORIZED', 'Người dùng chưa được kích hoạt.'
+    HTTP_402_USER_NOT_ACTIVE_WITH_PASSWORD = status.HTTP_401_UNAUTHORIZED, 'UNAUTHORIZED', 'Tài khoản không thể đăng nhập bằng mật khẩu.'
+
     ERROR_401_EXPIRED_TOKEN = status.HTTP_401_UNAUTHORIZED, 'EXPIRED TOKEN', 'Mã truy cập đã hết hạn.'
 
     ERROR_403_FORBIDDEN = status.HTTP_403_FORBIDDEN, 'FORBIDDEN', 'Bạn không được phép thực hiện hành động này.'

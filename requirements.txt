@@ -13,3 +13,7 @@ passlib
 unidecode
 rapidfuzz
 pyjwt
+authlib
+httpx
+itsdangerous
+minio
